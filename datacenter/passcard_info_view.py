@@ -12,10 +12,10 @@ def passcard_info_view(request, passcode):
         entered_at = timezone.localtime(this_passcard_visit.entered_at)
         leaved_at = timezone.localtime(this_passcard_visit.leaved_at)
         duration = get_duration(entered_at, leaved_at)
-        this_passkard_visit_info =  {"entered_at": entered_at, "duration": format_duration(duration), "is_strange": is_visit_long(duration)}
-        this_passcard_visits_info.append(this_passkard_visit_info)
+        this_passcard_visit_info =  {"entered_at": entered_at, "duration": format_duration(duration), "is_strange": is_visit_long(duration)}
+        this_passcard_visits_info.append(this_passcard_visit_info)
     context = {
         "passcard": passcard,
         "this_passcard_visits": this_passcard_visits_info
     }
-    return render(request, 'passcard_info.html', context)
+    return render(request, "passcard_info.html", context)

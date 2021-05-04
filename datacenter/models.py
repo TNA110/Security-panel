@@ -14,7 +14,7 @@ def get_duration(entered_at, leaved_at):
 def format_duration(duration):
     hours = duration//3600
     minutes = (duration%3600)//60
-    formated_duration = f'{int(hours)} ч {int(minutes)} мин'
+    formated_duration = f"{int(hours)} ч {int(minutes)} мин"
     return formated_duration
 
 def is_visit_long(duration):
@@ -29,7 +29,7 @@ class Passcard(models.Model):
     def __str__(self):
         if self.is_active:
             return self.owner_name
-        return f'{self.owner_name} (inactive)'
+        return f"{self.owner_name} (inactive)"
 
 
 class Visit(models.Model):

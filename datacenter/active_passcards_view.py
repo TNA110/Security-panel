@@ -8,4 +8,4 @@ def active_passcards_view(request):
     context = {
         "active_passcards": active_passcards,  # люди с активными пропусками
     }
-    return render(request, 'active_passcards.html', context)
+    return render(request, "active_passcards.html", context)
